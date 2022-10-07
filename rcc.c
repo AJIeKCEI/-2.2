@@ -37,9 +37,9 @@ void init_RCC(void)
     uint32_t pllcfgr = 0;
     //пред делитель ноль это два
     pllcfgr |= RCC_PLLCFGR_PLLSRC_HSE;
-    pllcfgr |= 12 << RCC_PLLCFGR_PLLM_Pos;
-    pllcfgr |= 192 << RCC_PLLCFGR_PLLN_Pos;
-    pllcfgr |= 4 << RCC_PLLCFGR_PLLP_Pos;
+    pllcfgr |= 8 << RCC_PLLCFGR_PLLM_Pos;
+    pllcfgr |= 64 << RCC_PLLCFGR_PLLN_Pos;
+    pllcfgr |= 1 << RCC_PLLCFGR_PLLP_Pos;
 
     RCC->PLLCFGR = pllcfgr;
 
